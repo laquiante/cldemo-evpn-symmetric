@@ -18,12 +18,20 @@ Network Topology Diagram
 ![EVPN Symmetric Model Demo](https://github.com/CumulusNetworks/cldemo-evpn-symmetric/blob/master/evpn_symmetric_demo.png)
 
 
+Check the Kernel routing table on the leaf in the VRF:
 
- 
- `cumulus@leaf01:mgmt-vrf:~$ net show bgp evpn route
-BGP table version is 17, local router ID is 10.0.0.11`
-
-
+    cumulus@leaf01:mgmt-vrf:~$ ip route show vrf vrf1
+    default  proto bgp  metric 20
+    nexthop via 10.0.0.42  dev vlan4001 weight 1 onlink
+    nexthop via 10.0.0.41  dev vlan4001 weight 1 onlink
+    unreachable default  metric 4278198272
+    10.1.3.0/24 dev vlan13  proto kernel  scope link  src 10.1.3.11
+    10.1.3.0/24 dev vlan13-v0  proto kernel  scope link  src 10.1.3.1
+    10.1.3.103 via 10.0.0.134 dev vlan4001  proto bgp  metric 20 onlink
+    10.2.4.0/24 dev vlan24  proto kernel  scope link  src 10.2.4.11
+    10.2.4.0/24 dev vlan24-v0  proto kernel  scope link  src 10.2.4.1
+    10.2.4.104 via 10.0.0.134 dev vlan4001  proto bgp  metric 20 onlink
+   
 
 
 
