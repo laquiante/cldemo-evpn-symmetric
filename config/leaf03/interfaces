@@ -1,5 +1,5 @@
 
-opback interface
+#loopback interface
 auto lo
 iface lo inet loopback
   address 10.0.0.13/32
