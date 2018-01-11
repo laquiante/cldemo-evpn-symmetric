@@ -31,9 +31,8 @@ Look at the EVPN Routing Table:
      Network          Next Hop            Metric LocPrf Weight Path
      Route Distinguisher: 10.0.0.11:2
      *> [2]:[0]:[0]:[48]:[44:38:39:00:00:03]
-                                   10.0.0.112                         32768 i
-                                    10.0.0.112                         32768 i
-                                    *> [2]:[0]:[0]:[48]:[44:38:39:00:00:03]:[32]:[10.1.3.101]
+                     10.0.0.112                         32768 i                           
+     *> [2]:[0]:[0]:[48]:[44:38:39:00:00:03]:[32]:[10.1.3.101]
                                        10.0.0.112                         32768 i
                                        *> [2]:[0]:[0]:[48]:[44:38:39:00:00:03]:[128]:[fe80::4638:39ff:fe00:3]
                                           10.0.0.112                         32768 i
@@ -80,36 +79,6 @@ Check the Kernel routing table on the leaf in the VRF:
 
 
 
-> cumulus@leaf01:mgmt-vrf:~$ net show bgp evpn route
->BGP table version is 17, local router ID is 10.0.0.11
->Status codes: s suppressed, d damped, h history, * valid, > best, i - internal
->Origin codes: i - IGP, e - EGP, ? - incomplete
->EVPN type-2 prefix: [2]:[ESI]:[EthTag]:[MAClen]:[MAC]:[IPlen]:[IP]
->EVPN type-3 prefix: [3]:[EthTag]:[IPlen]:[OrigIP]
->  Network          Next Hop            Metric LocPrf Weight Path
-> Route Distinguisher: 10.0.0.11:2
->*> [2]:[0]:[0]:[48]:[44:38:39:00:00:03]
->                                10.0.0.112                         32768 i
->*> [2]:[0]:[0]:[48]:[44:38:39:00:00:03]:[32]:[10.1.3.101]
->                                10.0.0.112                         32768 i
->                                *> [2]:[0]:[0]:[48]:[44:38:39:00:00:03]:[128]:[fe80::4638:39ff:fe00:3]
->                                10.0.0.112                         32768 i
->                                *> [2]:[0]:[0]:[48]:[46:38:39:00:00:03]
->                                10.0.0.112                         32768 i
->*> [2]:[0]:[0]:[48]:[46:38:39:00:00:17]
->*> [3]:[0]:[32]:[10.0.0.112]
- >10.0.0.112                         32768 i
- >Route Distinguisher: 10.0.0.11:3
- >**-SNIP-**
- >Route Distinguisher: 10.0.0.41:2
->10.0.0.41                              0 65020 65041 25253 i
->*> [5]:[0]:[0]:[0.0.0.0]
->10.0.0.41                              0 65020 65041 25253 i
->Route Distinguisher: 10.0.0.42:2
->*  [5]:[0]:[0]:[0.0.0.0]
->*                     10.0.0.42                              0 65020 65042 25253 i
->* *> [5]:[0]:[0]:[0.0.0.0]
->10.0.0.42                              0 65020 65042 25253 i
 
 
 
