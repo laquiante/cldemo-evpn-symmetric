@@ -15,10 +15,7 @@ The Network Topology is depicted below.
 **YOU MUST BE RUNNING AT LEAST CUMULUX LINUX/VX VERSION 3.5 FOR THIS DEMO**
 
 Network Topology Diagram
-![EVPN Symmetric Model Demo](https://github.com/CumulusNetworks/cldemo-evpn-symmetric/)
-   
-
-   
+![EVPN Symmetric Model Demo](https://github.com/CumulusNetworks/cldemo-evpn-symmetric/blob/master/evpn_symmetric_demo.png)
 
 > cumulus@leaf01:mgmt-vrf:~$ net show bgp evpn route
 BGP table version is 17, local router ID is 10.0.0.11
