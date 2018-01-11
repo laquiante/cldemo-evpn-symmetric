@@ -15,6 +15,8 @@ The Network Topology is depicted below.
 **YOU MUST BE RUNNING AT LEAST CUMULUX LINUX/VX VERSION 3.5 FOR THIS DEMO**
 
 Network Topology Diagram
+![EVPN Symmetric Model Demo](https://github.com/CumulusNetworks/cldemo-evpn-symmetric/)
+   
 
    
 
