@@ -48,6 +48,7 @@ Before running this demo, install VirtualBox and Vagrant. The currently supporte
     git clone https://github.com/CumulusNetworks/cldemo-evpn-symmetric
     cd cldemo-config-evpn-symmetric
     ansible-playbook run-demo.yml
+    vagrant ssh oob-mgmt-server
     ssh server01
     ping 172.16.1.1 
 
