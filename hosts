@@ -1,3 +1,5 @@
+---
+
 [leaf]
 leaf01
 leaf02
@@ -12,7 +14,7 @@ spine02
 exit01
 exit02
 
-[internet router]
+[internetrouter]
 internet
 
 
@@ -29,4 +31,4 @@ server04
 leaf
 spine
 exit
-internet
+internetrouter
