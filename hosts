@@ -15,7 +15,7 @@ exit01
 exit02
 
 [internetrouter]
-internet
+internet ansible_sudo_pass=CumulusLinux!
 
 
 [oob]
