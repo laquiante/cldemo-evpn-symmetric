@@ -1,5 +1,5 @@
 # cldemo-evpn-symmetric
-Demo for EVPN network using symmetric model
+
 This demo shows one approach of running VXLAN Routing with EVPN.  It uses the distributed architecture with symmetric IRB model. (Note Cumulus supports asymmetric model as well).  Using this technique employs the VXLAN Routing directly on the ToR, using EVPN for both VLAN/VXLAN bridging as well as VXLAN and external routing.  
 
 In this demo, each server is configured on a VLAN, with a total of two VLANs for the setup.  MLAG is also set up between servers and the leafs.
