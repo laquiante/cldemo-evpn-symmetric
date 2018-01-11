@@ -12,13 +12,55 @@ We advertise a default route via the BGP ipv4 address family originating from th
 
 The Network Topology is depicted below.
 
-**YOU MUST BE RUNNING AT LEAST CUMULUX LINUX/VX VERSION 3.5 FOR THIS DEMO**
 
-Network Topology Diagram
+## Topology ##
 ![EVPN Symmetric Model Demo](https://github.com/CumulusNetworks/cldemo-evpn-symmetric/blob/master/evpn_symmetric_demo.png)
 
 
-Look at the EVPN Routing Table:
+
+
+Software in Use:
+----------------
+
+On Spines, Leafs, Exits and Internet:
+
+ - Cumulus v3.5.0
+
+On Servers:
+
+ - Ubuntu 16.04 
+  
+
+
+
+
+Quickstart: Run the demo
+------------------------
+
+Before running this demo, install VirtualBox and Vagrant. The currently supported versions of VirtualBox and Vagrant can be found on the [cldemo-vagrant](https://github.com/CumulusNetworks/cldemo-vagrant) page.  
+
+    git clone https://github.com/cumulusnetworks/cldemo-vagrant
+    cd cldemo-vagrant
+    vagrant up oob-mgmt-server oob-mgmt-switch 
+    vagrant up leaf02 leaf03 spine01 spine02 exit01 exit02 internet server01 server02 server03 server04
+    vagrant ssh oob-mgmt-server
+    sudo su - cumulus
+    git clone https://github.com/CumulusNetworks/cldemo-evpn-symmetric
+    cd cldemo-config-evpn-symmetric
+    ansible-playbook deploy.yml
+    ssh server01
+    ping 172.16.1.1 
+
+
+
+   
+    
+
+Viewing the Results
+-------
+
+
+View the EVPN Routing Table:
 
    
 
