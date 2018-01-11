@@ -19,8 +19,9 @@ Network Topology Diagram
 
 
 
- `cumulus@leaf01:mgmt-vrf:~$ net show bgp evpn route`
-`BGP table version is 17, local router ID is 10.0.0.11`
+ 
+ `cumulus@leaf01:mgmt-vrf:~$ net show bgp evpn route
+BGP table version is 17, local router ID is 10.0.0.11`
 
 
 
