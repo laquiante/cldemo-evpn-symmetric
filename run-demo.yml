@@ -1,0 +1,28 @@
+---
+
+- hosts: network
+  become: yes
+  roles:
+    - copy_interfaces
+    - copy_frr_daemons
+    - restart_switches
+    - mv_ntp_mgmt_vrf
+      
+- hosts: network
+  become: yes
+  tasks:
+    - name: copy FRR conf
+      copy: src=config/{{ansible_hostname}}/frr.conf dest=/etc/frr/
+    - name: reload networking
+      command: ifreload -a
+    - name: reload frr
+      service: name=frr state=restarted
+      
+
+- hosts: servers
+  user: cumulus
+  become: yes
+  become_method: sudo
+  roles:
+    - copy-int-reboot-servers
+    
