@@ -10,6 +10,15 @@
       
 - hosts: network
   become: yes
+  pre_tasks:
+    # To prevent trying this demo on unsupported version, define the minimum Cumulus Linux
+    # Release supported by this demo.
+    - name: Verify Minimum Software Version
+      assert:
+        that: "{{ansible_lsb.release | version_compare('3.5', '>=') }}"
+        msg: >
+          "Cumulus Linux version must be 3.5 or later.
+          Version {{ansible_lsb.release}} detected"
   tasks:
     - name: copy FRR conf
       copy: src=config/{{ansible_hostname}}/frr.conf dest=/etc/frr/
