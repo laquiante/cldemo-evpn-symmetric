@@ -2,7 +2,7 @@
 
 - hosts: network
   become: yes
-    pre_tasks:
+  pre_tasks:
     # To prevent trying this demo on unsupported version, define the minimum Cumulus Linux
     # Release supported by this demo.
     - name: Verify Minimum Software Version
