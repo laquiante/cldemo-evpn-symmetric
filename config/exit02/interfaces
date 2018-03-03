@@ -4,10 +4,10 @@ iface lo inet loopback
   address 10.0.0.42/32
 
 # The primary network interface
+
 auto eth0
-iface eth0 inet static
-  address 192.168.0.42/24
-  vrf mgmt
+iface eth0 inet dhcp
+    vrf mgmt
 
 auto vrf1
 iface vrf1
