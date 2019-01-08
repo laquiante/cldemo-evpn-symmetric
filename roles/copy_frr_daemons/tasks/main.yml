@@ -1,3 +1,0 @@
----
-  - name: copy FRR daemons
-    copy: src=config/daemons dest=/etc/frr/

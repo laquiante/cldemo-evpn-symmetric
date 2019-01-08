@@ -1,0 +1,6 @@
+---
+  - name: Load Interface Configuration
+    copy: src=config/{{ansible_hostname}}/interfaces dest=/etc/network/
+  
+  - name: Apply Interface Configuration
+    shell:  ifreload -a

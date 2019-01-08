@@ -22,9 +22,13 @@ The Network Topology is depicted below.
 Software in Use:
 ----------------
 
+On oob-mgmt-server:
+
+ - Ansible v2.5.4
+
 On Spines, Leafs, Exits and Internet:
 
- - Cumulus v3.5.0
+ - Cumulus v3.7.2
 
 On Servers:
 
@@ -41,6 +45,7 @@ Before running this demo, install VirtualBox and Vagrant. The currently supporte
 
     git clone https://github.com/cumulusnetworks/cldemo-vagrant
     cd cldemo-vagrant
+    git checkout cl3.7.2
     vagrant up oob-mgmt-server oob-mgmt-switch 
     vagrant up leaf01 leaf02 leaf03 leaf04 spine01 spine02 exit01 exit02 internet server01 server02 server03 server04
     vagrant ssh oob-mgmt-server

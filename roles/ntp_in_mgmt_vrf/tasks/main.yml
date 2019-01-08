@@ -1,0 +1,6 @@
+---
+- name: Stop and Disable NTP Service in the Default VRF
+  service: name=ntp state=stopped enabled=false
+
+- name: Start and Enable NTP Service in the MGMT VRF
+  service: name=ntp@mgmt state=started enabled=true
