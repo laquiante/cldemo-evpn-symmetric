@@ -1,5 +1,4 @@
 ---
-
 [leaf]
 leaf01
 leaf02
@@ -15,8 +14,7 @@ exit01
 exit02
 
 [internetrouter]
-internet ansible_sudo_pass=CumulusLinux!
-
+internet 
 
 [oob]
 oob-mgmt-server
@@ -32,3 +30,8 @@ leaf
 spine
 exit
 internetrouter
+
+[all:vars]
+ansible_user=cumulus
+ansible_ssh_pass=CumulusLinux!
+ansible_become_pass=CumulusLinux!
