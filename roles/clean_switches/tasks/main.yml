@@ -1,0 +1,7 @@
+---
+  - name: Clean-up Interface Configuration
+    copy: src=config_clean/{{ansible_hostname}}/interfaces dest=/etc/network/
+  
+  - name: Activate
+    shell: /sbin/ifreload -a
+

@@ -1,0 +1,13 @@
+---
+- hosts: network
+  become: yes
+  roles:
+    - clean_switches
+      
+- hosts: servers
+  user: cumulus
+  become: yes
+  become_method: sudo
+  roles:
+    - clean_hosts
+    
