@@ -1,0 +1,23 @@
+---
+  - name: Kopieren der Umgebungsvariablen
+    copy: src=container-ns-02/umgebung2.sh dest=/home/cumulus
+
+  - name: Wechseln des Besitzers
+    file:
+      path: /home/cumulus/umgebung2.sh
+      owner: cumulus
+      group: cumulus
+      mode: '1777'
+
+  - name: Kopieren der Befehle
+    copy: src=container-ns-02/server01-ns-02.sh dest=/home/cumulus
+
+  - name: Wechseln des Besitzers
+    file:
+      path: /home/cumulus/server01-ns-02.sh
+      owner: cumulus
+      group: cumulus
+      mode: '1777'
+
+  - name: Erstellen des ns container01
+    shell: ./server01-ns-02.sh
