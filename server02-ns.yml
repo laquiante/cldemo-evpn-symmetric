@@ -5,4 +5,11 @@
   become_method: sudo
   roles:
     - server01-ns-002
-    
+
+#- hosts: leaf01
+#  tasks:
+#  - name: zum zweiten
+#    nclu:
+#      commands:
+#        - net add routing route 172.16.0.0/24 10.1.3.101 vrf vrf1
+#      atomic: true    

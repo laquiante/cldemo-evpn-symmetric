@@ -2,6 +2,12 @@
 
 . umgebung2.sh
 
+echo "Zweiten Weg ausschalten"
+sudo ifdown eth2
+
+echo "routing einschalten"
+sudo sysctl -w net.ipv4.ip_forward=1
+
 echo "Creating the namespaces"
 sudo ip netns add $CON1
 sudo ip netns add $CON2
